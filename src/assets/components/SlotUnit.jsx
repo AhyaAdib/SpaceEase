@@ -159,16 +159,16 @@ function SlotUnit({ blockName, index, status, plateNumber, onToggle, onExpire, u
               title: "Pembayaran E‑Wallet",
               html: `
                 <div class="ewallet-grid">
-                  <button class="ewallet-option" data-value="BCA">
+                  <button class="ewallet-option" data-value="BOCA">
                     <img src="https://pbs.twimg.com/media/Dt3a9mIXcAASN-Y.jpg" alt="BCA" />
                     <span>BOCA</span>
                   </button>
-                  <button class="ewallet-option" data-value="BRI">
+                  <button class="ewallet-option" data-value="BRO">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvggF7NSCS0Be-uwwe09frkmXzg7m7tyHzQvE19513K3YWV9A5FYYg6ywxobD9DuEwNu0&usqp=CAU" 
                     alt="BRO" />
                     <span>BRI</span>
                   </button>
-                  <button class="ewallet-option" data-value="Gopay">
+                  <button class="ewallet-option" data-value="BOKEK">
                     <img src="https://scontent-cgk1-1.xx.fbcdn.net/v/t1.6435-9/116576117_1240381752980213_1231666167387861196_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2ksVZmk0BrcQ7kNvgHyXfeZ&_nc_oc=AdiEoqm7tu7NlysB_ukiVnqoZnJy5ir_LDmR3CPAp-upukGIMfPHyFpEehq4gPQgkDY&_nc_zt=23&_nc_ht=scontent-cgk1-1.xx&_nc_gid=AveuQIFhR_6NStdriF7D2a2&oh=00_AYCsYpbc3AAhLM8BrqrZs0luirqNwylC1GyBbbC3GCRJ9Q&oe=67EC193C" 
                     alt="Gopay" />
                     <span>Bokek</span>
