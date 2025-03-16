@@ -1,0 +1,449 @@
+/* Reset gaya dasar */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background: #3674B5; */
+    background: #f5f5f5;
+    color: #f5f5f5;;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Gaya judul utama */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #00c497;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Kontainer utama
+.parkingSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+} */
+
+.parkingSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Buat grid dinamis */
+    gap: 20px;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+}
+
+.parkingMonitor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Blok parkir */
+/* .blockContainer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    } */
+    
+    /* Container untuk setiap blok */
+.blockContainer {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(to right, rgba(79, 209, 168, 0.87), rgba(65, 205, 127, 0.37));
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    overflow: visible !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 4px 30px rgba(0, 0, 0, 0.1), /* outer shadow */
+        inset 0 4px 10px rgba(0, 0, 0, 0.3); /* inner shadow untuk efek tenggelam */
+}
+  
+/* Grid slot parkir */
+.slotContainer {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+margin: 10px;
+gap: 10px;
+justify-items: center;
+}
+
+
+/* Judul setiap blok */
+.blockTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #D1F8EF;
+}
+
+
+
+/* Tombol slot parkir */
+.slotUnit {
+    padding: 15px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 90px;
+    width: 100px;
+    color: white;
+}
+
+/* Animasi hover */
+.slotUnit:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+/* Ikon di dalam tombol */
+.slotIcon {
+    font-size: 1.8rem;
+}
+
+/* Label status */
+.statusLabel {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+/* Style grid opsi e-wallet */
+.ewallet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  justify-items: center;
+}
+
+/* Style tombol opsi e-wallet */
+.ewallet-option {
+  background: rgba(79, 209, 167, 0.2);
+  backdrop-filter: blur(6px);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.ewallet-option img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.ewallet-option span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #2f2f2f;
+}
+
+.ewallet-option:hover {
+  transform: scale(1.05);
+}
+
+/* Highlight tombol yang dipilih */
+.ewallet-option.selected {
+  border: 2px solid #4FD1A7;
+}
+
+/* Style grid opsi e-wallet */
+.ewallet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    justify-items: center;
+  }
+  
+  /* Style tombol opsi e-wallet */
+  .ewallet-option {
+    background: rgba(79, 209, 167, 0.2);
+    backdrop-filter: blur(6px);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .ewallet-option img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 5px;
+  }
+  
+  .ewallet-option span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #2f2f2f;
+  }
+  
+  .ewallet-option:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Highlight tombol yang dipilih */
+  .ewallet-option.selected {
+    border: 2px solid #4FD1A7;
+  }
+  
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .slotContainer {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+    
+    .slotUnit {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.slotWrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .slotUnit {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  
+  .slotUnit:hover {
+    transform: scale(1.05);
+  }
+  
+  .slotIcon {
+    font-size: 24px;
+  }
+  
+  .slotText {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .statusLabel {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .infoButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #D1F8EF;
+    border: none;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+
+
+/* Kontainer utama */
+.parkingSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Judul setiap blok */
+.blockTitle {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f8f9fa;
+}
+
+/* Grid slot parkir */
+.slotContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    padding: 10px;
+}
+
+/* Tombol slot parkir */
+.slotUnit {
+    padding: 12px;
+    border: none;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: min(120px, 22vw);
+    width: min(120px, 22vw);
+    color: white;
+}
+
+/* Animasi hover */
+.slotUnit:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+/* Label status */
+.statusLabel {
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    font-weight: bold;
+}
+
+.bookContainer {
+    background: rgba(255, 255, 255, 0.1);
+    align-self: center;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    overflow: visible !important;
+    margin-top: 200px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .slotContainer {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+
+    .slotUnit {
+        width: 110px;
+        height: 110px;
+    }
+
+    .blockContainer {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .blockTitle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tombol Info */
+.infoButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #D1F8EF;
+    border: none;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Pop-up untuk informasi tambahan */
+.popupOverlay {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+.popupContent {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: clamp(280px, 90vw, 350px);
+    text-align: center;
+    z-index: 1001;
+}
+
+  
+  .popupOverlay {
+    position: fixed;  /* Pastikan selalu di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Tingkatkan z-index agar tidak tertutup */
+  }
+  
+  .popupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    z-index: 1001; /* Pastikan lebih tinggi dari elemen lain */
+  }
+  
+  .popupContent h3 {
+    margin: 0 0 10px;
+  }
+  
+  .popupContent button {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  
+
+  

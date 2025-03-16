@@ -1,0 +1,129 @@
+/* Navbar Glassmorphism */
+.navbar {
+    margin-left: -30px;
+    background: rgb(0 200 134 / 24%);;
+    backdrop-filter: blur(10px);
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    text-shadow: 8px 3px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Menu */
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar-menu li {
+    margin: 0 15px;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    color: #A3DAFF;
+  }
+
+  .navbar-menu .active {
+    background: rgb(0 200 134 / 24%);;
+  }
+  
+  /* Menu Toggle (Mobile) */
+  .menu-icon {
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Foto Profil */
+  .profile-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsif */
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .menu-icon svg{
+        margin: 10px;
+    }
+    
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  
+    .navbar-menu.active {
+        display: flex;
+        margin-top: 0;
+        background: rgb(0 200 134 /86%);;
+        backdrop-filter: blur(10px);
+        height: 220%;
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+  
+    .navbar-menu li {
+      margin: 15px 0;
+    }
+  }
+  
