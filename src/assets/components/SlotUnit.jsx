@@ -87,16 +87,22 @@ function SlotUnit({ blockName, index, status, plateNumber, onToggle, onExpire, u
         let elapsed
 
         try {
-            const snapshot = await get(durationRef)
-            if(snapshot.exists())
-            {
-                const savedStartTime = new Date(snapshot.val())
-                elapsed = Math.floor((new Date() - savedStartTime / 1000))
-            } else {
-                await set(durationRef, startTime.getTime())
-                elapsed = 0
-            }
+            const snapshot = await get(durationRef);
+            if (snapshot.exists() && snapshot.val() > 0) { // Pastikan nilai valid
+                const savedStartTime = snapshot.val(); 
+                console.log("Saved Start Time (miliseconds):", savedStartTime);
 
+                const currentTime = Date.now();
+                elapsed = Math.floor((currentTime - savedStartTime) / 1000); // Hitung dalam detik
+
+                console.log("Elapsed (seconds):", elapsed);
+            } else {
+                // Jika belum ada data atau datanya tidak valid, set waktu baru
+                const startTime = Date.now();
+                await set(durationRef, startTime);
+                elapsed = 0;
+                console.log("Start time set to:", startTime);
+            }
             // await update(durationRef, startTime.getTime())
         } catch (e) {
             console.log('Error fetching parking duration:', e)
