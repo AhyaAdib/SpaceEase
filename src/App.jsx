@@ -10,6 +10,7 @@ import Monitoring from "./assets/pages/Monitoring.jsx"; // Buat halaman ini jika
 // import SignUp from "./assets/pages/SignUp";
 // import Contact from "./assets/pages/Contact";
 import HomePage from "./assets/pages/homePage";
+import Operator from "./assets/pages/Operator.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/monitoring" element={<Monitoring />} />
+        <Route path="/operator" element={ <Operator />} />
         {/* <Route path="/profile" element={<Profile />} />
         <Route path="/booking-history" element={<BookingHistory />} />
         <Route path="/about" element={<About />} />

@@ -1,41 +1,43 @@
-import { useEffect, useState } from "react";
-import BlockUnit from "../components/BlockUnit.jsx";
-import "../styles/homePage.css";
-import Navbar from "../components/Navbar.jsx";
-import {db, ref, onValue} from "../../../firebase.js"
+import "../styles/home.css";
 
-function Book()
-{
+export default function Home() {
   return (
-    <>
-      <h1>Pesan Sekarang</h1>
-    </>
-  )
-}
+    <div className="home-container">
+      {/* Hero Section */}
+      <section className="hero">
+        <h1><span className="brand">Selamat Datang di <strong>SpaceEase</strong></span></h1>
+        <p>Solusi parkir cerdas untuk pengalaman yang lebih mudah dan efisien.</p>
+        <button className="cta-button">Pesan Parkir Sekarang</button>
+      </section>
 
-export default function HomePage() {
-    const [title, setTitle] = useState("Halo")
-    const parkingData = [
-        { blockName: "A", blockUnit: 3 },
-        { blockName: "B", blockUnit: 4 },
-        { blockName: "C", blockUnit: 4 },
-    ];
+      {/* About Section */}
+      <section className="about glassmorph">
+        <div className="content">
+          <h2>Tentang SpaceEase</h2>
+          <p>SpaceEase adalah sistem parkir pintar berbasis AI yang membantu Anda menemukan tempat parkir dengan cepat dan nyaman.</p>
+          <ul>
+            <li>🚀 Parkir lebih cepat dan efisien.</li>
+            <li>📡 Notifikasi real-time untuk ketersediaan slot.</li>
+            <li>💳 Pembayaran digital yang mudah.</li>
+          </ul>
+        </div>
+      </section>
 
-    // const [userSlot, setUserSlot] = useState(null);
-    const [userSelectedSlot, setUserSelectedSlot] = useState(null); // Menyimpan slot yang dipilih user
+      {/* How It Works Section */}
+      <section className="how-it-works">
+        <h2>Cara Kerja</h2>
+        <div className="steps">
+          <div className="step glassmorph">1️⃣ Pilih lokasi parkir</div>
+          <div className="step glassmorph">2️⃣ Pesan dan bayar secara digital</div>
+          <div className="step glassmorph">3️⃣ Parkir dengan mudah menggunakan panduan sistem</div>
+        </div>
+      </section>
 
-    // useEffect(() => {
-    //     const data = ref(db);
-
-    //     onValue(data, (snapshot) => {
-    //         setTitle(snapshot.val().title)
-    //     })
-    // }, [db])
-    return (
-        <>
-            <Navbar />
-
-            <h1>Ini Home</h1>
-        </>
-    );
+      {/* Call to Action */}
+      <section className="cta-section glassmorph">
+        <h2>Siap Menggunakan SpaceEase?</h2>
+        <button className="cta-button">Daftar Sekarang</button>
+      </section>
+    </div>
+  );
 }

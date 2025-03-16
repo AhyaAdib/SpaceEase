@@ -39,7 +39,7 @@ function Navbar() {
 
                 {/* Foto Profil */}
                 <div className="profile-container">
-                <img src={profilePic} alt="Profile" className="profile-pic" />
+                <Link to="/operator"><img src={profilePic} alt="Profile" className="profile-pic" /></Link>
                 </div>
             </div>
         </div>

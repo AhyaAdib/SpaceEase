@@ -1,0 +1,99 @@
+/* Glassmorphism Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Ukuran Grid */
+.large { grid-column: span 2; height: 120px; }
+.medium { grid-column: span 1; height: 120px; }
+.small { height: 100px; }
+
+/* Warna Background */
+.green { background: linear-gradient(to right, #56ab2f, #a8e063); }
+.blue { background: linear-gradient(to right, #36D1DC, #5B86E5); }
+.orange { background: linear-gradient(to right, #FF8008, #FFC837); }
+.red { background: linear-gradient(to right, #FF512F, #DD2476); }
+.purple { background: linear-gradient(to right, #8E2DE2, #4A00E0); }
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Title */
+.dashboard-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #00c497;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Chart Container */
+.chart-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    color: #00c497;
+    text-align: center;
+}
+
+/* Tombol Portal */
+.portal-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.portal-button.open {
+    background-color: red;
+    color: white;
+}
+
+/* Riwayat Parkir */
+.parking-history {
+    margin-top: 30px;
+}
+
+.parking-history table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #000;
+}
+
+.parking-history th, .parking-history td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.parking-history th {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+

@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #a8edea, #fed6e3);
+    color: #333;
+  }
+  
+  .home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #66cc99, #33ccff);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .brand {
+    color: #baffe8;
+    font-weight: bold;
+  }
+  
+  .cta-button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* About Section */
+  .about {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #222;
+  }
+  
+  .glassmorph {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    margin: 40px auto;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    background: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+  }
