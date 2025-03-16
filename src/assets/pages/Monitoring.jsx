@@ -36,7 +36,7 @@ export default function HomePage() {
             <Navbar />
 
             {/* <h1>{title}</h1> */}
-            <h1>Tempat Parkir <br/> <b style={{    color: '#12dc65', fontSize: '2.2rem'}}>Sigmall</b></h1>
+            <h1>Tempat Parkir <br/> <b style={{    color: '#12dc65', fontSize: '2.2rem'}}>Heweh</b></h1>
             <br/>
             <div className="parkingMonitor">
                 <div className="parkingSection">
