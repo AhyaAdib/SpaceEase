@@ -13,10 +13,11 @@ function saveSlotStatusToDB(blockName, slotIndex, status)
 }
 
 const savePlateNumberToDB = (blockName, slotIndex, plateNumber) => {
-  update(ref(db, `parkingSlots/${blockName}/${slotIndex}/plateNumber`), plateNumber)
+  update(ref(db, `parkingSlots/${blockName}/${slotIndex}`), { plateNumber })
     .then(() => console.log("Data berhasil disimpan"))
     .catch((error) => console.error("Gagal menyimpan data:", error));
 };
+
 
 
 
@@ -107,11 +108,41 @@ export default function BlockUnit({ blockName, blockLength }) {
         }
         
         if (currentStatus === "kosong") {
-          newStatuses[index] = "dipesan";
-          saveSlotStatusToDB(blockName, index, "dipesan");
-
-          setTimeout(() => ResetUser(index), 19000);
-          setUserSelectedSlot(`${blockName}-${index}`);
+          Swal.fire({
+            title: "Masukkan Plat Nomor",
+            input: "text",
+            inputPlaceholder: "Contoh: AG1234XY",
+            showCancelButton: true,
+            confirmButtonText: "Pesan",
+            cancelButtonText: "Batal",
+            inputValidator: (value) => {
+              const platePattern = /^[A-Z]{1,2}\d{4}[A-Z]{1,2}$/;
+              if (!platePattern.test(value)) {
+                return "Format plat nomor salah! Harus dalam format XX1234XX";
+              }
+            },
+          }).then((result) => {
+            if (result.isConfirmed) {
+              const plateNumber = result.value;
+    
+              newStatuses[index] = "dipesan";
+              setSlotStatuses(newStatuses);
+              setUserSelectedSlot(`${blockName}-${index}`);
+    
+              saveSlotStatusToDB(blockName, index, "dipesan");
+              savePlateNumberToDB(blockName, index, plateNumber);
+    
+              setPlateNumbers((prevPlates) => {
+                const newPlates = [...prevPlates];
+                newPlates[index] = plateNumber;
+                return newPlates;
+              });
+    
+              Swal.fire("Berhasil!", `Slot ${blockName}-${index + 1} telah dipesan untuk ${plateNumber}`, "success");
+    
+              setTimeout(() => ResetUser(index), 19000);
+            }
+          });
         } else if (currentStatus === "dipesan" && userSelectedSlot === `${blockName}-${index}`) {
             // setPlateNumbers((prevPlates) => {
             //     const newPlates = [...prevPlates];

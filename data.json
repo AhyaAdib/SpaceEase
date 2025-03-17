@@ -1,106 +1,125 @@
 {
-"parkingSlots": {
-    "user": {
-    "status": "kosong", 
-    "plateNumber": "AB ***4 CD",
-    "startTime": 0,
-    "duration": 0,
-    "totalCost": 0,   
-    "reservedTime": 0
+    "blockLengths": {
+      "A": 3,
+      "B": 2,
+      "C": 4
     },
-    "A": {
-    "0": { 
-        "status": "kosong", 
+    "blockNames": [
+      "A",
+      "B",
+      "C"
+    ],
+    "gateCommand": "CLOSED",
+    "gateCommandL": "CLOSED",
+    "parkingSlots": {
+      "A": [
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "kosong",
+          "totalCost": 0
+        },
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "kosong",
+          "totalCost": 0
+        },
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "kosong",
+          "totalCost": 0
+        }
+      ],
+      "B": [
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "kosong",
+          "totalCost": 0
+        },
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "kosong",
+          "totalCost": 0
+        },
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "kosong",
+          "totalCost": 0
+        }
+      ],
+      "C": [
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "kosong",
+          "totalCost": 0
+        },
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "dipakai",
+          "totalCost": 0
+        },
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "dipakai",
+          "totalCost": 0
+        },
+        {
+          "duration": 0,
+          "plateNumber": "AB ***4 CD",
+          "reservedTime": 0,
+          "startTime": 1742143300410,
+          "status": "dipakai",
+          "totalCost": 0
+        }
+      ],
+      "X": [
+        {
+          "status": "kosong"
+        },
+        {
+          "status": "kosong"
+        },
+        {
+          "status": "dipakai"
+        }
+      ],
+      "user": {
+        "duration": 0,
         "plateNumber": "AB ***4 CD",
+        "reservedTime": 0,
         "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
+        "status": "kosong",
+        "totalCost": 0
+      }
     },
-    "1": { 
-        "status": "dipakai", 
-        "plateNumber": "AB ***4 CD",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    },
-    "2": { 
-        "status": "dipesan", 
-        "plateNumber": "AB ***4 CD",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    }
-    },
-    "B": {
-    "0": { 
-        "status": "dipakai", 
-        "plateNumber": "B ***8 EF",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    },
-    "1": { 
-        "status": "kosong", 
-        "plateNumber": "AB ***4 CD",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    },
-    "2": { 
-        "status": "kosong", 
-        "plateNumber": "AB ***4 CD",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    },
-    "3": { 
-        "status": "kosong", 
-        "plateNumber": "AB ***4 CD",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    }
-    },
-    "C": {
-    "0": { 
-        "status": "dipakai", 
-        "plateNumber": "B ***8 EF",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    },
-    "1": { 
-        "status": "kosong", 
-        "plateNumber": "AB ***4 CD",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    },
-    "3": { 
-        "status": "kosong", 
-        "plateNumber": "AB ***4 CD",
-        "startTime": 0,
-        "duration": 0,
-        "totalCost": 0,   
-        "reservedTime": 0
-    }
-    }
-},
-"gateCommand": "CLOSED",
-"title": "Sistem Parkir",
-"blockNames": ["A", "B", "C"], 
-"blockLengths": { 
-    "A": 3, 
-    "B": 2, 
-    "C": 4 
-}
-}
+    "portal_status": false,
+    "scanPlate": "AG1234PS",
+    "title": "Sistem Parkir",
+    "total_income": 12000
+  }
