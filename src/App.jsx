@@ -20,6 +20,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/monitoring" element={<Monitoring />} />
         <Route path="/operator" element={ <Operator />} />
+        <Route path='*' element={<HomePage />} />
         {/* <Route path="/profile" element={<Profile />} />
         <Route path="/booking-history" element={<BookingHistory />} />
         <Route path="/about" element={<About />} />

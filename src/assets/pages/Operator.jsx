@@ -20,12 +20,12 @@ export default function Operator() {
 
     const handleOpenPortal = () => {
         setPortalOpen(true);
-        set(ref(db, "portal_status"), true);
+        set(ref(db, "gateCommand"), "OPEN");
 
         setTimeout(() => {
             setPortalOpen(false);
-            set(ref(db, "portal_status"), false);
-        }, 5000);
+            set(ref(db, "gateCommand"), 'CLOSED');
+        }, 3000);
     };
 
     const chartData = {

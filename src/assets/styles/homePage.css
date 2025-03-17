@@ -9,11 +9,20 @@ body {
 }
 
 /* Gaya judul utama */
-h1 {
+h1{
     font-size: 2rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    color: #00c497;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2.HomeTitle{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: #00c497;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }

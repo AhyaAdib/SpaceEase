@@ -34,7 +34,7 @@ function Navbar() {
                 <ul className={`navbar-menu ${menuActive ? "active" : ""}`}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/monitoring">Monitoring</Link></li>
-                <li><Link to="/profile">Profil</Link></li>
+                {/* <li><Link to="/profile">Profil</Link></li> */}
                 </ul>
 
                 {/* Foto Profil */}
