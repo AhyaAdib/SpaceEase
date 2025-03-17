@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import clickSound from "../sfx/click.wav";
-import {db, ref, get, set, update} from "../../../firebase.js"
+// import {db, ref, get, set, update} from "../../../firebase.js"
+import { db, ref, get, set, update, onValue } from "../../../firebase.js";
+
 
 
 const parkingRate = 10
@@ -46,7 +48,45 @@ function SlotUnit({ blockName, index, status, plateNumber, onToggle, onExpire, u
         audio.play();
     };
 
+    const checkSlotStatusRealtime = () => {
+        try {
+            // Ambil referensi scanPlate secara real-time
+            const scanPlateRef = ref(db, "/scanPlate");
+    
+            onValue(scanPlateRef, async (scanPlateSnap) => {
+                if (!scanPlateSnap.exists()) {
+                    console.log("Tidak ada data scanPlate.");
+                    return;
+                }
+    
+                const scanPlate = scanPlateSnap.val();
+                console.log("Scan Plate:", scanPlate);
+    
+                // Ambil slot parkir yang sesuai
+                const slotsRef = ref(db, `parkingSlots/${blockName}/${index}`);
+                
+                get(slotsRef).then((slotSnap) => {
+                    if (slotSnap.exists() && slotSnap.val().plateNumber === scanPlate) {
+                        // Jika plat nomor cocok, izinkan membuka gerbang
+                        update(ref(db, `parkingSlots/${blockName}/${index}`), { canOpen: true });
+                        set(ref(db, "/canOpen"), true);
+                        console.log(`Slot ${blockName}-${index} dapat dibuka.`);
+                    } else {
+                        console.log("Plat nomor tidak cocok dengan slot ini.");
+                    }
+                }).catch((error) => {
+                    console.error("Error saat mengambil data slot:", error);
+                });
+            });
+        } catch (error) {
+            console.error("Error saat mengecek status slot secara real-time:", error);
+        }
+    };
+    
+    // Panggil fungsi ini sekali untuk mulai memantau perubahan
+    
     useEffect(() => {
+        checkSlotStatusRealtime();    
         if (status === "dipesan") {
             setReservedTime(new Date());
 
